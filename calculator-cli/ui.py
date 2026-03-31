@@ -3,6 +3,10 @@ from exceptions import BadInputException
 
 
 def ui() -> None:
+    """
+    main ui worker for the calculator
+    """
+    
     print("_____________ Calculator _____________")
     print("Enter 'q' to exit\n")
     
@@ -38,6 +42,19 @@ def ui() -> None:
         
 
 def take_input(input_number: int) -> float:
+    """
+    function for taking input from the cli
+    
+    Args:
+        input_number: the input number to ask to the user
+        
+    Returns:
+        the input taken from the user
+        
+    Raises:
+        BadInputException: in case of invalid input
+    """
+    
     user_input = input(f"Enter number {input_number}: ")
     
     try:

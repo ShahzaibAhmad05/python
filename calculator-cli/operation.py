@@ -46,6 +46,19 @@ class Multiply(Operator):
     
 
 def decode_operation(operator: str) -> Operator:
+    """
+    Decoding the operator class type and returning a usable instance
+    
+    Args:
+        operator: the operator input given by the user
+    
+    Returns:
+        usable instance of the operator type decoded
+
+    Raises:
+        BadOperatorException: in case of unknown operator or bad input
+    """
+    
     if operator == "+":
         return Add()
     elif operator == "-":
